@@ -3,6 +3,7 @@ body {
     color: white;
     font-family: 'Indie Flower', cursive;
     font-size: x-large;
+    text-align: center;
     /*font-family: 'Domine', serif;*/
 }
 
@@ -11,4 +12,38 @@ body {
     height: 300px;
     margin: auto;
     display: block;
+    top: 0;
+    position: absolute;
+}
+
+#content-body {
+    position: absolute;
+    top: 300px;
+    text-align: center;
+    width: 98%;
+}
+
+#table-body {
+    width: inherit;
+    text-align: center;
+}
+
+#rick-pic {
+    width: 350px;
+    height: 200px;
+}
+
+#morty-pic {
+    width: 350px;
+    height: 200px;
+}
+
+#meeseeks-pic {
+    width: 350px;
+    height: 200px;
+}
+
+#birdperson-pic {
+    width: 350px;
+    height: 200px;
 }
