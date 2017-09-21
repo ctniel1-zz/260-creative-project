@@ -54,6 +54,10 @@ td {
     border-radius: 15px;
 }
 
+.learn-more {
+    text-decoration: underline;
+}
+
 #rick-pic {
     width: 500px;
     height: 300px;
