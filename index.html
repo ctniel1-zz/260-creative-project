@@ -6,6 +6,10 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Domine|Indie+Flower" rel="stylesheet">
     <script>
+        var statusRick = 0;
+        var statusMorty = 0;
+        var statusMeeseeks = 0;
+        var statusBirdPerson = 0;
         var rickChange = function() {
             document.getElementById("rick-pic").src="https://media.giphy.com/media/8HhbENQPdWUoM/giphy.gif";
         };
@@ -16,7 +20,7 @@
             document.getElementById("meeseeks-pic").src="https://media1.giphy.com/media/26tnefi35yUMNuLO8/200.webp#15-grid1";
         };
         var birdpersonChange = function () {
-            document.getElementById("birdperson-pic").src="https://media3.giphy.com/media/1UrLooZOVeGly/200.webp#0-grid1";
+            document.getElementById("birdperson-pic").src="https://media.tenor.com/images/ba144de141465205452326f8f338a757/tenor.gif";
         };
         var resetPics = function() {
             document.getElementById("rick-pic").src="https://media3.giphy.com/media/l41lI4bYmcsPJX9Go/200.webp#2-grid1";
@@ -24,28 +28,100 @@
             document.getElementById("meeseeks-pic").src="https://media3.giphy.com/media/DgLsbUL7SG3kI/200.webp#1-grid1";
             document.getElementById("birdperson-pic").src="https://media2.giphy.com/media/dwcZtlmi1P9ni/200.webp#4-grid1";
         };
+        var rickInfo = function() {
+            if (statusRick == 0) {
+                document.getElementById("rick-info-guide").innerHTML = "Garalgaijgoijsdoijeiagoiasdogijaosdknfoaweinfoiasdofijaosidgjoawnerfknasdf\n" +
+                    "                        aosidoiahdsgoihaoijfdoiajsdofiasodigoiasdhofiasefnoasidgoihasodighoasidjfoasdf\n" +
+                    "                        jasdoijgsoaijgoiasjdofiasoidhfoihasdoighoiasjdofijasdoifjaosidjfoijasdfijasg\n" +
+                    "                        oiahsogihaoidgoiuwekhasodgnoaidgoiasdofijaosidjfoiajsdofijosidjfoiajsdofijasdf\n";
+                statusRick = 1;
+                console.log(statusRick);
+            }else{
+                document.getElementById("rick-info-guide").innerHTML = "Learn about Rick";
+                statusRick = 0;
+            }
+        };
+        var mortyInfo = function() {
+            if (statusMorty == 0) {
+                document.getElementById("morty-info-guide").innerHTML = "Garalgaijgoijsdoijeiagoiasdogijaosdknfoaweinfoiasdofijaosidgjoawnerfknasdf\n" +
+                    "                        aosidoiahdsgoihaoijfdoiajsdofiasodigoiasdhofiasefnoasidgoihasodighoasidjfoasdf\n" +
+                    "                        jasdoijgsoaijgoiasjdofiasoidhfoihasdoighoiasjdofijasdoifjaosidjfoijasdfijasg\n" +
+                    "                        oiahsogihaoidgoiuwekhasodgnoaidgoiasdofijaosidjfoiajsdofijosidjfoiajsdofijasdf\n";
+                statusMorty = 1;
+                console.log(statusMorty);
+            }else{
+                document.getElementById("morty-info-guide").innerHTML = "Learn about Rick";
+                statusMorty = 0;
+            }
+        };
+        var meeseeksInfo = function() {
+            if (statusMeeseeks == 0) {
+                document.getElementById("meeseeks-info-guide").innerHTML = "Garalgaijgoijsdoijeiagoiasdogijaosdknfoaweinfoiasdofijaosidgjoawnerfknasdf\n" +
+                    "                        aosidoiahdsgoihaoijfdoiajsdofiasodigoiasdhofiasefnoasidgoihasodighoasidjfoasdf\n" +
+                    "                        jasdoijgsoaijgoiasjdofiasoidhfoihasdoighoiasjdofijasdoifjaosidjfoijasdfijasg\n" +
+                    "                        oiahsogihaoidgoiuwekhasodgnoaidgoiasdofijaosidjfoiajsdofijosidjfoiajsdofijasdf\n";
+                statusMeeseeks = 1;
+                console.log(statusMeeseeks);
+            }else{
+                document.getElementById("meeseeks-info-guide").innerHTML = "Learn about Rick";
+                statusMeeseeks = 0;
+            }
+        };
+        var birdPersonInfo = function() {
+            if (statusBirdPerson == 0) {
+                document.getElementById("birdperson-info-guide").innerHTML = "Garalgaijgoijsdoijeiagoiasdogijaosdknfoaweinfoiasdofijaosidgjoawnerfknasdf\n" +
+                    "                        aosidoiahdsgoihaoijfdoiajsdofiasodigoiasdhofiasefnoasidgoihasodighoasidjfoasdf\n" +
+                    "                        jasdoijgsoaijgoiasjdofiasoidhfoihasdoighoiasjdofijasdoifjaosidjfoijasdfijasg\n" +
+                    "                        oiahsogihaoidgoiuwekhasodgnoaidgoiasdofijaosidjfoiajsdofijosidjfoiajsdofijasdf\n";
+                statusBirdPerson = 1;
+                console.log(statusBirdPerson);
+            }else{
+                document.getElementById("birdperson-info-guide").innerHTML = "Learn about Rick";
+                statusBirdPerson = 0;
+            }
+        }
     </script>
 </head>
 <body>
     <img id="banner" src="https://ib1.hulu.com/show_key_art/22881?size=1600x600&region=US"/>
+    <h1 id="banner-title">Rick and Morty Fan Page</h1>
     <div id="content-body">
-        <h1>Rick and Morty Fan Page</h1>
         <table id="table-body">
             <tr>
-                <td>Rick Sanchez</td>
+                <td class="info-box">
+                    Rick Sanchez
+                    <p id="rick-info-guide" onclick="rickInfo()">
+                        Learn about Rick
+                    </p>
+                </td>
                 <td><img id="rick-pic" src="https://media3.giphy.com/media/l41lI4bYmcsPJX9Go/200.webp#2-grid1" onmouseenter="rickChange()" onmouseleave="resetPics()"></td>
             </tr>
             <tr>
                 <td><img id="morty-pic" src="https://media1.giphy.com/media/LniS2J1fPj0Hu/200.webp#3-grid1" onmouseenter="mortyChange()" onmouseleave="resetPics()"></td>
-                <td>Morty Sanchez</td>
+                <td class="info-box">
+                    Morty Sanchez
+                    <p id="morty-info-guide" onclick="mortyInfo()">
+                        Learn about Morty
+                    </p>
+                </td>
             </tr>
             <tr>
-                <td>Mr. Meeseeks</td>
+                <td class="info-box">
+                    Mr. Meeseeks
+                    <p id="meeseeks-info-guide" onclick="meeseeksInfo()">
+                        Learn about Mr. Meeseeks
+                    </p>
+                </td>
                 <td><img id="meeseeks-pic" src="https://media3.giphy.com/media/DgLsbUL7SG3kI/200.webp#1-grid1" onmouseenter="meeseeksChange()" onmouseleave="resetPics()"></td>
             </tr>
             <tr>
                 <td><img id="birdperson-pic" src="https://media2.giphy.com/media/dwcZtlmi1P9ni/200.webp#4-grid1" onmouseenter="birdpersonChange()" onmouseleave="resetPics()"></td>
-                <td>Bird Person</td>
+                <td class="info-box">
+                    Bird Person
+                    <p id="birdperson-info-guide" onclick="birdPersonInfo()">
+                        Learn about Bird Person
+                    </p>
+                </td>
             </tr>
         </table>
     </div>
