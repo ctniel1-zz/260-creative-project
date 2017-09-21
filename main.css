@@ -1,0 +1,14 @@
+body {
+    background: black;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: x-large;
+    /*font-family: 'Domine', serif;*/
+}
+
+#banner {
+    width: 90%;
+    height: 300px;
+    margin: auto;
+    display: block;
+}
